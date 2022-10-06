@@ -1,11 +1,11 @@
-name: deploy-master
+name: deploy-github-pages
 run-name: ${{ github.actor }} is deploying master
 on:
   push:
     branches:
       - "master"
 jobs:
-  deploy-master:
+  deploy-github-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - run: npm install
       - run: PUBLIC_URL=/2022_01-ci-cd-my-react-SatangBudsai npm run build
       - run: |
-          mkdir -p gh-pages
+          mkdir -p ./gh-pages
           git init -b gh-pages ./gh-pages
           cd ./gh-pages
           git renote add -t gh-pages origin \
