@@ -23,7 +23,7 @@ jobs:
           mkdir ./gh-pages
           git init -b gh-pages ./gh-pages
           cd ./gh-pages
-          git renote add -t gh-pages origin \
+          git remote add -t gh-pages origin \
           https://git:${{ github.token }}@github.com/${{ github.repository }}.git
           rm -rf ./*
           cp -rf ../build/* ./
