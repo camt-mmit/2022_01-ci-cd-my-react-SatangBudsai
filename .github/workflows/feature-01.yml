@@ -21,8 +21,9 @@ jobs:
           npm install
       - run: |
           npm ci
-          npm run test
+          npm run feature-01
       - run: |
           git fetch --unshallow
           git checkout main
-          git merge --no-ff test
+          git merge --no-ff feature-01
+          git push
