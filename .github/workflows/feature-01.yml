@@ -26,5 +26,5 @@ jobs:
       - run: |
           git fetch --unshallow
           git checkout master
-          git merge --no-ff feature-01
+          git merge feature-01
           git push
