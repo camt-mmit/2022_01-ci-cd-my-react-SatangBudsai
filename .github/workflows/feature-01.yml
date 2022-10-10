@@ -22,9 +22,9 @@ jobs:
       - run: |
           npm ci
           npm run feature-01
-      - name: Merge to master
-        run: |
-          git fetch --unshallow
-          git checkout master
-          git merge feature-01
-          git push
+      # - name: Merge to master
+      #   run: |
+      #     git fetch --unshallow
+      #     git checkout master
+      #     git merge feature-01
+      #     git push
