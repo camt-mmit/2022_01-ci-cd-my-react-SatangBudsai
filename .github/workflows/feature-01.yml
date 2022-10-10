@@ -1,11 +1,11 @@
-name: feature-01 CI
+name: feature-01-CI
 run-name: ${{ github.actor }} is deploying master
 on:
   push:
     branches:
       - "master"
 jobs:
-  feature-01:
+  feature-01-CI:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
