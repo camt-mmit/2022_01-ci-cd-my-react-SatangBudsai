@@ -21,7 +21,7 @@ jobs:
           npm install
       - run: |
           npm ci
-          npm run feature-01
+          npm run test
       - name: Merge to master
         run: |
           git fetch --unshallow
